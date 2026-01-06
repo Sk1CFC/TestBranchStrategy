@@ -10,6 +10,6 @@ jobs:
       - name: Checout repository
         uses: actions/checout@v4
 
-        name: Execute command
+      - name: Execute command
         run: echo "Hellow world from Staging!!!"
 
