@@ -7,8 +7,8 @@ jobs:
   CIJob:
     runs-on: ubuntu-latest
     steps:
-      - name: Checout repository
-        uses: actions/checout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Execute command
         run: echo "Hellow world from Staging!!!"
