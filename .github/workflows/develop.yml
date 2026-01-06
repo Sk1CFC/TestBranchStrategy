@@ -1,0 +1,21 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  CIJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Execute command
+        run: echo "Hellow world from dev!!!"
+
+  CDJob:
+    runs-on: ubuntu-latest
+    needs: CIJob
+    steps:
+      - name: Execute command
+        run: echo "Deploying to Dev!!!"
