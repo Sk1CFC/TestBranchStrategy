@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    tags:
+      - 'V*.*.*'
+jobs:
+  CIJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Execute command
+        run: echo "Hello world from production!!!"
+
